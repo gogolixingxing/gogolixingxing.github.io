@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ARM系统的寻址方式 | Li xingxing</title>
+  <title>Tag: 学习 | Li xingxing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式 。">
-<meta name="keywords" content="ARM,学习">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ARM系统的寻址方式">
-<meta property="og:url" content="http://yoursite.com/2019/10/08/ARM系统的寻址方式/index.html">
+  <meta name="description" content="���ͼ���">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Li xingxing">
+<meta property="og:url" content="http://yoursite.com/tags/学习/index.html">
 <meta property="og:site_name" content="Li xingxing">
-<meta property="og:description" content="寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式 。">
+<meta property="og:description" content="���ͼ���">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-09T12:07:07.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ARM系统的寻址方式">
-<meta name="twitter:description" content="寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式 。">
+<meta name="twitter:title" content="Li xingxing">
+<meta name="twitter:description" content="���ͼ���">
   
     <link rel="alternative" href="/atom.xml" title="Li xingxing" type="application/atom+xml">
   
@@ -155,124 +153,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ARM系统的寻址方式" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ARM系统的寻址方式
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/08/ARM系统的寻址方式/" class="archive-article-date">
+  	<time datetime="2019-10-08T11:16:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/08/ARM系统的寻址方式/">ARM系统的寻址方式</a>
     </h1>
   
 
-        
-        <a href="/2019/10/08/ARM系统的寻址方式/" class="archive-article-date">
-  	<time datetime="2019-10-08T11:16:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式-。"><a href="#寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式-。" class="headerlink" title="寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式 。"></a><strong>寻址方式是根据指令给出的地址码字段来实现寻找真实操作地址的方式。arm处理器共有8种寻址方式 。</strong></h4><a id="more"></a>
-
-<hr>
-<h2 id="1-寄存器寻址"><a href="#1-寄存器寻址" class="headerlink" title="1.寄存器寻址"></a>1.寄存器寻址</h2><p>​    <strong>寄存器寻址指令中的代码码字段指的是寄存器编号，操作数的值在寄存器中，指令执行时可直接取出寄存器中的值来操作</strong></p>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOV       R1,R2                        ; 将R2的值存到R1中。</span><br><span class="line">SUB       R0,R1,R2                     ; 将R1的值减R2的值，结果保存在R0。</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-立即寻址"><a href="#2-立即寻址" class="headerlink" title="2.立即寻址"></a>2.立即寻址</h2><p><strong>操作码字段后面的地址码就是操作数，取出指令同时也取出了操作数。</strong></p>
-<h4 id="示例：-1"><a href="#示例：-1" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SUBS      R0,R0,#1                     ; R0减1，结果放入R0，并且影响标志位。</span><br><span class="line">MOV       R0,#0xFF000                  ; 将立即数0xFF000装入R0寄存器。</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-寄存器移位寻址"><a href="#3-寄存器移位寻址" class="headerlink" title="3.寄存器移位寻址"></a>3.寄存器移位寻址</h2><p>​     <strong>ARM指令集特有的寻址方式。当第二个操作数是寄存器移位方式时，在与第一个操作数结合之前，选择进行移位操作。</strong></p>
-<p><strong>可采用的移位操作如下：</strong></p>
-<ul>
-<li>LSL    逻辑左移（Logical Shift Left），寄存器中字的低端空出的位补0。</li>
-<li>LSR    逻辑右移（Logical Shift Right），寄存器中字的高端空出的位补0。</li>
-<li>ASR    算术右移（Arithemetic Shift Right），移位过程中保持符号位不变，若源操作数为正数，则字的高端空位补0，否则补1。</li>
-<li>ROR    循环右移（ROtate Right），由字的低端移出的位填入高端空出的位。</li>
-<li>RPX     带拓展的循环右移（ROtate Right eXtended by 1 place），操作数右移一位，高端空位用原C标志值填充。</li>
-</ul>
-<h4 id="示例：-2"><a href="#示例：-2" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MOv			R0,R2,LSL #3				;R2的值左移三位，结果放入R0，即 R0=R2x8。</span><br><span class="line">ANDS		R1,R1,R2,LSL R3				;R2的值左移R3位，再与R1进行与运算，结果存到R1中。</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-寄存器间接寻址："><a href="#4-寄存器间接寻址：" class="headerlink" title="4.寄存器间接寻址："></a>4.寄存器间接寻址：</h2><p>​    <strong>指令中的地址码给出的是一个通用寄存器的编号，所需的操作数保存在寄存器指定地址的存储单元中，即寄存器为操作数的地址指针。</strong></p>
-<h4 id="示例：-3"><a href="#示例：-3" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LDR			R1,[R2]						; 将R2指向的存储单元的数据读出，保存在R1中。</span><br><span class="line">SWP			R1,R1,[R2]					; 将存储器R1的值和R2指定的存储单元的内容交换。</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-基址寻址"><a href="#5-基址寻址" class="headerlink" title="5.基址寻址"></a>5.基址寻址</h2><p>​    <strong>基址寻址就是将基址寄存器的内容与指令中给出的偏移量相加，形成操作数的有效地址。基址寻址用于访问基址附近的存储单元，常用于查表、数组操作、功能部件寄存器访问等。</strong></p>
-<h4 id="示例：-4"><a href="#示例：-4" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LDR			R2,[R3,#0x0C]				; 读取R3+0x0C地址上的存储单元的内容，存入R2。</span><br><span class="line">STR			R1,[R0,#-4]					; 先R0=R0-4，然后把R1的值保存到R0指定的存储单元。</span><br><span class="line">LDR			R1,[R0,R3,LSL #1]			; 先将R3左移一位，再与R1相加，所得结果存入R1。</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-多寄存器寻址（常用）"><a href="#6-多寄存器寻址（常用）" class="headerlink" title="6.多寄存器寻址（常用）"></a>6.多寄存器寻址（常用）</h2><p>   <strong>多寄存器寻址一次可传送几个寄存器值，允许一条指令传送16个寄存器的任何子集或所有寄存器。</strong></p>
-<h4 id="示例：-5"><a href="#示例：-5" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LDMIA		R1!,&#123;R2-R7,R12&#125;				; 将R1指向的单元中的数据读到R2-R7，R12中，R1自动加一</span><br><span class="line">STMIA		R0!,&#123;R2-R7,R12&#125;				; 将R2-R7，R12中的值保存到R0指向的存储单元，R0自动加一。</span><br></pre></td></tr></table></figure>
-
-<h2 id="7-堆栈寻址："><a href="#7-堆栈寻址：" class="headerlink" title="7.堆栈寻址："></a>7.堆栈寻址：</h2><p>   <strong>堆栈是一个按特定顺序进行存取的存储区，操作顺序为“后进先出” 。堆栈寻址是隐含的，它使用一个专门的寄存器(堆栈指针)指向一块存储区域(堆栈)，指针所指向的存储单元即是堆栈的栈顶。</strong></p>
-<h5 id="存储器堆栈可分为两种："><a href="#存储器堆栈可分为两种：" class="headerlink" title="存储器堆栈可分为两种："></a>存储器堆栈可分为两种：</h5><ul>
-<li><p>向上生长：写入数据后，堆栈指针变大，向高地址的方向生长，称为递增堆栈。</p>
-</li>
-<li><p>向下生长：写入数据后，堆栈指针变小，向低地址的方向生长，称为递减堆栈。</p>
-</li>
-</ul>
-<p><strong>！！除了考虑堆栈指针的增长方向以外，还要考虑入栈时是否可以直接向堆栈指针指向的存储单元写入数据。</strong></p>
-<p><strong>ARM7支持两种情况：</strong></p>
-<ul>
-<li><p>堆栈指针指向最后压入的堆栈的有效数据项，称为满堆栈；</p>
-</li>
-<li><p>堆栈指针指向下一个待压入数据的空位置，称为空堆栈。 </p>
-</li>
-</ul>
-<p><strong>综上所述，可以得到四种堆栈类型：</strong></p>
-<ul>
-<li><p>满递增：堆栈向上增长，堆栈指针指向内含有效数据项的最高地址。指令如LDMFA、STMFA等。 </p>
-<hr>
-</li>
-<li><p>空递增：堆栈向上增长，堆栈指针指向堆栈上的第一个空位置。指令如LDMEA、STMEA等。 </p>
-<hr>
-</li>
-<li><p>满递减：堆栈向下增长，堆栈指针指向内含有效数据项的最低地址。指令如LDMFD、STMFD等。</p>
-<hr>
-</li>
-<li><p>空递减：堆栈向下增长，堆栈指针向堆栈下的第一个空位置。指令如LDMED、STMED等。 </p>
-<hr>
-</li>
-</ul>
-<h4 id="示例：-6"><a href="#示例：-6" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STMFD			SP!,&#123;R!-R7,LR&#125;				; R1-R7，LR入栈，满递减</span><br><span class="line">LDMFD			SP!,&#123;R!-R7,LR&#125;				; 数据出栈，放入R1-R7，LR寄存器，满递减</span><br></pre></td></tr></table></figure>
-
-<h2 id="8-相对寻址："><a href="#8-相对寻址：" class="headerlink" title="8.相对寻址："></a>8.相对寻址：</h2><p>​    <strong>相对寻址是基址寻址的一种变通。由程序计数器PC提供基准地址，指令中的地址码字段作为偏移量，两者相加后得到的地址即为操作数的有效地址。</strong></p>
-<h4 id="示例：-7"><a href="#示例：-7" class="headerlink" title="示例："></a>示例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  		BL		SUBR1						;调用子程序SUBR1</span><br><span class="line">		BEQ		LOOP						;条件跳转到LOOP标号处</span><br><span class="line">		 .</span><br><span class="line">		 .</span><br><span class="line">LOOP	MOV		R6，#1</span><br><span class="line">		 .</span><br><span class="line">		 .</span><br><span class="line">SUBR1	......</span><br></pre></td></tr></table></figure>
-
-<h2 id="完"><a href="#完" class="headerlink" title="完"></a>完</h2><h3 id="好好努力！！"><a href="#好好努力！！" class="headerlink" title="好好努力！！"></a>好好努力！！</h3>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>Grazie mille, angelo mio.<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/zz.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -288,117 +198,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/ARM系统的寻址方式/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2019/10/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://yoursite.com/2019/10/08/ARM系统的寻址方式/", 
-    sourceId: "ARM系统的寻址方式",
-    productKey: "ture",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -424,9 +236,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
